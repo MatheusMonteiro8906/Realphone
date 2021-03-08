@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site foda</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="shortcut icon" href="images/logo1.png">
+</head>
+<body>
+    <div class="main">
+           <nav>
+               <div class="logo">
+                   <img src="images/logo.png" draggable="false">
+               </div>
+               <div class="nav-links">
+                   <ul>
+                       <li><a href="#">Home</a></li>
+                       <li><a href="#">Phones</a></li>
+                       <li><a href="#">accessories</a></li>
+                       <li><a href="#">Cart</a></li>
+                   </ul>
+               </div>
+           </nav>
+               <div class="information">
+                   <div class="overlay"></div>
+                   <img src="images/mobile.png" class="mobile imagem" draggable="false">
+                   <div id="circle">
+                         <div class="f1 Feature one">
+                             <img src="images/camera.png" draggable="false">
+                                 <h1>Camera</h1>
+                                 <p>12Mp, Wide angle lens</p>
+                            </div>
+                         <div class="Feature two">
+                             <img src="images/processor.png" draggable="false">
+                                  <h1>Processor</h1>
+                                  <p>Snapdragon Octa-core 11nm</p>
+                            </div>
+                         <div class="Feature three">
+                             <img src="images/display.png" draggable="false">
+                                   <h1>Display</h1>
+                                   <p>6.5" Mini-drop fullscreen</p>
+                            </div>
+                         <div class="Feature four">
+                             <img src="images/battery.png" draggable="false">
+                                    <h1>Battery life</h1>
+                                    <p>5000mAh, 720Hrs Standby</p>
+                            </div>             
+                   </div>
+               </div>
+               <div class="controls">
+                <img src="images/arrow.png" id="upBtn" draggable="false">
+                <h3>Features</h3>
+                <img src="images/arrow.png" id="downBtn" draggable="false">
+               </div>
+    </div>
+           <script>
+               var circle = document.getElementById("circle");
+               var downBtn = document.getElementById("downBtn");
+               var upBtn = document.getElementById("upBtn");
+
+               var rotateValue = circle.style.transform;
+               var rotateVar;
+
+               upBtn.onclick = function()
+               {
+                   rotateVar = rotateValue + "rotate(-90deg)";
+                   circle.style.transform = rotateVar;
+                   rotateValue = rotateVar;
+               }
+               downBtn.onclick = function()
+               {
+                   rotateVar = rotateValue + "rotate(90deg)";
+                   circle.style.transform = rotateVar;
+                   rotateValue = rotateVar;
+               }
+           </script>
+</body>
+</html>
